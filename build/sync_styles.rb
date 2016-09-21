@@ -19,13 +19,9 @@ class SyncStyles
   end
 end
 
-
-
-
-# App start:
-
-# p SyncStyles.methods.grep(/class/)
-p SyncStyles.sync_to_src
-
-
-# eval "SyncStyles.#{ARGV[0]}";
+# App start: `clone_mui sync_to_src`
+if SyncStyles.singleton_methods.include?(ARGV[0].to_sym)
+  eval "SyncStyles.#{ARGV[0]}";
+else
+  puts "Invalid methods #{ARGV[0]}";
+end
