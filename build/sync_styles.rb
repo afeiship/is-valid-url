@@ -7,15 +7,25 @@ ROOT_PATH = SyncRepositry.discover_root;
 TMP_PATH = File.join ROOT_PATH,'/.tmp';
 STYLES_PATH = File.join ROOT_PATH,'/src/styles';
 
+class SyncStyles
+  def self.clone_mui
+    FileUtils.rm_rf(TMP_PATH);
+    SyncRepositry.clone_at 'https://github.com/muicss/mui.git',TMP_PATH;
+  end
 
-FileUtils.rm_rf(TMP_PATH);
-SyncRepositry.clone_at 'https://github.com/muicss/mui.git',TMP_PATH;
+  def self.sync_to_src
+    FileUtils.rm_rf Dir.glob(File.join(STYLES_PATH,'**'));
+    FileUtils.cp_r Dir.glob(File.join(TMP_PATH,'/src/sass/**')), STYLES_PATH;
+  end
+end
 
-#list scss:
-# FileUtils.cd(tmp) do
-#   Dir.glob('**/{.*,*.*}').reject{ |f| f.include? '.scss' }.each do |item|
-#     # FileUtils.rm_rf(item);
-#   end
-#
-#   FileUtils.cp_r tmp_src, project_src;
-# end
+
+
+
+# App start:
+
+# p SyncStyles.methods.grep(/class/)
+p SyncStyles.sync_to_src
+
+
+# eval "SyncStyles.#{ARGV[0]}";
