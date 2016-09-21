@@ -2,9 +2,5 @@
 # A sample Gemfile
 source "https://gems.ruby-china.org"
 
-# gem "rails"
-
-gem 'git', '1.3.0'
-
 gem 'fileutils', '0.7'
 gem 'sync_repositry', git: 'git@github.com:afeiship/gem_sync_repositry.git', submodules: true
