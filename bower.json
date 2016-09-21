@@ -1,0 +1,24 @@
+{
+  "name": "vue-mui",
+  "description": "MUI components based on vue.",
+  "main": "dist/vue-mui.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/vue-mui",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}
