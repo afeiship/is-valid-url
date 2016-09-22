@@ -1,0 +1,9 @@
+@import "../config/index.scss";
+@import "../styles/mui.scss";
+
+body {
+  position: static;
+  overflow: auto;
+  user-select: auto;
+  user-drag: auto;
+}

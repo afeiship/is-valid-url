@@ -23,5 +23,5 @@ end
 if SyncStyles.singleton_methods.include?(ARGV[0].to_sym)
   eval "SyncStyles.#{ARGV[0]}";
 else
-  puts "Invalid methods #{ARGV[0]}";
+  puts "Invalid command `#{ARGV[0]}`";
 end
