@@ -6,6 +6,9 @@ export default function(router) {
     '/appbar': {
       component: require('./views/appbar/index.vue')
     },
+    '/container': {
+      component: require('./views/container/index.vue')
+    },
     '*': {
       component: require('./views/404/index.vue')
     }
