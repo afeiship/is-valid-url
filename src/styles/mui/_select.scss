@@ -23,8 +23,6 @@ $xFormLabelLineHeight: floor($mui-label-font-size * 1.25);
   }
 
   > select {
-    @include mui-node-inserted();
-
     // Layout
     display: block;
     height: $mui-input-height;
@@ -67,6 +65,18 @@ $xFormLabelLineHeight: floor($mui-label-font-size * 1.25);
       cursor: $mui-cursor-disabled;
       background-color: $mui-input-bg-color-disabled;
       opacity: 1;  // iOS fix for unreadable disabled content
+    }
+
+    // disable focus ring in Firefox
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+
+    // prevent IE background color
+    &:focus::-ms-value {
+      background: none;
+      color: $mui-text-dark;
     }
   }
 

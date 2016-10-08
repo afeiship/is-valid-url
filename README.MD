@@ -5,7 +5,8 @@ MUI components based on vue.
 ## basic command:
 + sync mui styles:
 ```javascript
-npm run sync
+npm run sync `clone_mui`
+npm run sync `sync_to_src`
 ```
 
 
@@ -17,3 +18,4 @@ npm run sync
 
 ## resource :
 + https://github.com/muicss/mui
++ https://www.muicss.com/

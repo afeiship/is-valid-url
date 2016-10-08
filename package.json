@@ -4,7 +4,9 @@
   "description": "MUI components based on vue.",
   "homepage": "https://github.com/afeiship/vue-mui",
   "scripts":{
-    "sync":"./build/sync_styles.rb"
+    "sync":"./build/sync_styles.rb",
+    "clean": "rimraf dist/* static",
+    "dev": "npm run clean && cd src && webpack-dev-server --progress --colors --config webpack.config.dev.js"
   },
   "author": {
     "name": "afei",
