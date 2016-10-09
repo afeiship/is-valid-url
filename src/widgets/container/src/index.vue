@@ -1,5 +1,5 @@
 <template lang="html">
-  <div data-f=fluid :class="fluid ? 'mui-container-fluid' : 'mui-container'">
+  <div :class="fluid ? 'mui-container-fluid' : 'mui-container'">
     <slot></slot>
   </div>
 </template>
