@@ -15,7 +15,7 @@ npm install @jswork/is-valid-url
 ```js
 import isValidUrl from '@jswork/is-valid-url';
 
-// usage goes here.
+isValidUrl('https://api.github.com/users/afeiship');  // true
 ```
 
 ## license
