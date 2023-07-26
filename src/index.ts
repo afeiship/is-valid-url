@@ -1,5 +1,7 @@
 declare var wx: any;
 
+// https://www.freecodecamp.org/news/check-if-a-javascript-string-is-a-url/
+
 const URL_RE = new RegExp(
   '^(https?:\\/\\/)?' + // validate protocol
     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // validate domain name
