@@ -1,6 +1,6 @@
 {
   "name": "@jswork/is-valid-url",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check input is a valid url.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -51,5 +51,11 @@
       ],
       "@babel/preset-typescript"
     ]
-  }
+  },
+  "keywords": [
+    "is",
+    "valid",
+    "url",
+    "uri"
+  ]
 }
