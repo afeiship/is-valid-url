@@ -1,7 +1,7 @@
 declare var wx: any;
 
 // https://www.freecodecamp.org/news/check-if-a-javascript-string-is-a-url/
-
+const supportURL = typeof URL === 'function';
 const URL_RE = new RegExp(
   '^(https?:\\/\\/)?' + // validate protocol
     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // validate domain name
@@ -13,6 +13,15 @@ const URL_RE = new RegExp(
 );
 
 const isValidUrl = (inString): boolean => {
+  if (supportURL) {
+    try {
+      const url = new URL(inString);
+      return !!url.hostname && url.protocol.indexOf('http') === 0;
+    } catch (e) {
+      return false;
+    }
+  }
+
   if (typeof inString !== 'string') return false;
   return URL_RE.test(inString);
 };
